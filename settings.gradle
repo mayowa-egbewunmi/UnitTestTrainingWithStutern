@@ -1,0 +1,2 @@
+rootProject.name='UnitTestTrainingWithStutern'
+include ':app'
