@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">UnitTestTrainingWithStutern</string>
+    <string name="app_name">Unit Test Training With Stutern</string>
+    <string name="stutern_training">Stutern Training</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="write_something">Write something</string>
+    <string name="button_toast_message">Button tapped</string>
+    <string name="pause_toast_message">Activity paused</string>
+    <string name="gps_enabled">GPS Enabled</string>
+    <string name="gps_disabled">GPS Disabled</string>
+    <string name="activity_resumed">Activity Resumed</string>
 </resources>
