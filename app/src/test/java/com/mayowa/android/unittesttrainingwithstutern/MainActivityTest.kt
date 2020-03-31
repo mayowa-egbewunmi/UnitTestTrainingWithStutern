@@ -32,18 +32,18 @@ class MainActivityTest {
     }
 
     @Test
-    @Throws(Exception::class)
-    fun shouldHaveDefaultPadding() {
-        val button = activity.findViewById<Button>(R.id.hello_button)
-        assertEquals(5, button.paddingTop)
-        assertEquals(5, button.paddingBottom)
-        assertEquals(10, button.paddingLeft)
-        assertEquals(10, button.paddingRight)
+    fun checkActivityNotNull() {
+        Assert.assertNotNull(activity)
     }
 
     @Test
-    fun checkActivityNotNull() {
-        Assert.assertNotNull(activity)
+    fun assertLayoutProperties() {
+        val button = activity.findViewById<Button>(R.id.hello_button)
+        assertEquals(5, button.paddingBottom)
+        assertEquals(10, button.paddingLeft)
+        //TODO: assert the top padding
+        //TODO: assert the right padding
+        //TODO: assert the text on the button
     }
 
     @Test
@@ -53,7 +53,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun testIntent() {
+    fun shouldLaunchSecondActivity() {
         val view = activity.findViewById<Button>(R.id.hello_button)
         view.performClick()
 
@@ -62,6 +62,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertThat(shadowIntent.intentClass.simpleName, equalTo(SecondActivity::class.java.simpleName))
+    }
+
+    @Test
+    fun shouldLaunchThirdActivity() {
+        /**
+         * TODO: Create a new activity called ThirdActivity, add a new button to MainActivity
+         * to launch ThirdActivity. Write a test to validate thirdActivity intent was launched
+         * when button is tapped
+         */
+
     }
 
     @Test fun shouldShowToastWhenActivityIsPaused() {

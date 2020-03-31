@@ -1,6 +1,6 @@
 package com.mayowa.android.unittesttrainingwithstutern
 
-import org.junit.Assert.*
+import org.junit.Assert.assertFalse
 import org.junit.Test
 
 class AssertionTest {
@@ -14,14 +14,17 @@ class AssertionTest {
     @Test
     fun assertTrueTest(){
         val list = listOf(1, 2, 3)
-        assertTrue(list.contains(2))
+        //TODO: Assert that list contains 2
+    }
+
+    @Test
+    fun assertNotSameTest(){
+        //TODO
     }
 
     @Test
     fun assertSameTest(){
-        val list = listOf(1, 2, 3)
-        val actual = list[0]
-        assertSame(1, actual)
+        //TODO
     }
 
     @Test
